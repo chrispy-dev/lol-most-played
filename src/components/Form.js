@@ -16,8 +16,9 @@ const Form = ({ fetchSummoner }) => {
     };
 
     return (
-        <form className="p-3 bg-deep-purple-900" onSubmit={(event) => getSummoner(summonerName, event)}>
-            <input className="border-2 text-xl p-2 border-black rounded w-full" type="text" name="summoner" value={summonerName} onChange={(event) => onInputChange(event)} />
+        <form className="p-3 bg-deep-purple-900 flex justify-between" onSubmit={(event) => getSummoner(summonerName, event)}>
+            <input className="border-2 text-xl w-52 p-2 border-black rounded" type="text" placeholder="Djedidiah" name="summoner" value={summonerName} onChange={(event) => onInputChange(event)} />
+            <input className="bg-white px-4 rounded-lg" type="submit" value="Search" />
         </form>
     );
 };

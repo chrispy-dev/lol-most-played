@@ -9,6 +9,12 @@ module.exports = {
             '700': '#16162E'
           }
         },
+        borderColor: {
+          'deep-purple': {
+            '900': '#0A0B22',
+            '700': '#16162E'
+          }
+        },
         minHeight: {
           'nav-screen': 'calc(100vh - 76px)'
         }

@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import useWindowSize from './hooks/useWindowSize';
 import Summoner from './components/Summoner';
 import Form from './components/Form';
+import Home from './components/Home';
 
 import './App.css';
 
-const App = ({ mostPlayedChamp, data }) => {
+const App = ({ mostPlayedChamp, data, isFetching }) => {
   const [width] = useWindowSize();
 
   return (
@@ -16,7 +17,7 @@ const App = ({ mostPlayedChamp, data }) => {
         <Form />
 
         <div className="min-h-nav-screen flex justify-center items-center">
-          { data ? <Summoner width={width} /> : <h2 className="text-white text-2xl text-center px-12">Search for a summoner to get started!</h2> }
+          { data ? <Summoner width={width} /> : <Home /> }
         </div>
       </div>
     </div>
@@ -26,7 +27,8 @@ const App = ({ mostPlayedChamp, data }) => {
 const mapStateToProps = state => {
   return {
     mostPlayedChamp: state.mostPlayedChamp,
-    data: state.data
+    data: state.data,
+    isFetching: state.isFetching
   };
 };
 

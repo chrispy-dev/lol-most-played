@@ -10,7 +10,7 @@ const Summoner = ({ data, mostPlayedChamp, isFetching, width }) => {
             {
                 !isFetching
                 ? <div className="flex flex-col p-4 items-center text-white w-full">
-                    <div className="rounded-lg bg-deep-purple-900 w-full flex flex-col items-center pt-10 pb-8">
+                    <div className="rounded-lg bg-deep-purple-900 w-full flex border-2 border-deep-purple-900 flex-col items-center pt-10 pb-8">
                         <div className="relative">
                             <img className="img-outer h-24 w-24 rounded-full" src={`https://ddragon.leagueoflegends.com/cdn/11.12.1/img/profileicon/${data.summoner.profileIconId}.png`} />
                             <span className="level-outer absolute bg-deep-purple-900 font-semibold text-white rounded-full text-sm py-1 px-2 -bottom-5 right-7">{data.summoner.summonerLevel}</span>
